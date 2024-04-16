@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-01 11:44:38 AM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEyLTAxOzEwOjIzOjQ0IEFNOzI4MjU="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEyLTAxOzExOjQ0OjM4IEFNOzc7Mjk0Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kata" type="String" array="False" size=""/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <input variable="kata"/>
+            <assign variable="a" expression="0"/>
+            <call expression="palindrom(a,kata)"/>
+        </body>
+    </function>
+    <function name="palindrom" type="String" variable="palindrom">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="kata" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="palindrom" type="String" array="False" size=""/>
+            <assign variable="palindrom" expression="&quot;benar&quot;"/>
+            <assign variable="a" expression="0"/>
+            <while expression="a &lt;= len(kata)/2 -1 and palindrom=&quot;benar&quot;">
+                <if expression="char(kata,a) &lt;&gt; char(kata,len(kata)-a-1)">
+                    <then>
+                        <assign variable="palindrom" expression="&quot;false&quot;"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="a" expression="a+1"/>
+            </while>
+            <if expression="palindrom=&quot;benar&quot;">
+                <then>
+                    <output expression="&quot;YES&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="palindrom=&quot;false&quot;">
+                        <then>
+                            <output expression="&quot;NO&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

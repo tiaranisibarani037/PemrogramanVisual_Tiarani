@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-12 04:19:48 PM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEyLTEyOzEwOjEzOjE3IEFNOzI4MjY="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEyLTEyOzAxOjQ0OjA4IFBNOzI7SW5kYWg7REVTS1RPUC0xVU1UQUFEOzIwMjItMTAtMjc7MTA6Mjk6MzEgQU07VDA0LmZwcmc7NjU1NA=="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEyLTEyOzAyOjIyOjIxIFBNOzE7TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEyLTEyOzAyOjA1OjI2IFBNOzU4NDc="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEyLTEyOzA0OjE5OjQ4IFBNOzE4OzMwMTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Nama" type="String" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <call expression="Evaluate(Nama)"/>
+            <call expression="Room(Nama)"/>
+        </body>
+    </function>
+    <function name="Evaluate" type="None" variable="">
+        <parameters>
+            <parameter name="Nama" type="String" array="True"/>
+        </parameters>
+        <body>
+            <assign variable="Nama[0]" expression="&quot;&quot;"/>
+            <assign variable="Nama[1]" expression="&quot;&quot;"/>
+            <assign variable="Nama[2]" expression="&quot;&quot;"/>
+            <assign variable="Nama[3]" expression="&quot;&quot;"/>
+            <assign variable="Nama[4]" expression="&quot;&quot;"/>
+            <assign variable="Nama[5]" expression="&quot;&quot;"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+        </body>
+    </function>
+    <function name="Room" type="None" variable="">
+        <parameters>
+            <parameter name="Nama" type="String" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="5" direction="inc" step="1">
+                <assign variable="Nama[i]" expression="&quot;&quot;"/>
+                <while expression="i&lt;4">
+                    <input variable="Nama[i]"/>
+                    <if expression="Nama[i]=&quot;---&quot;">
+                        <then>
+                            <assign variable="i" expression="4"/>
+                        </then>
+                        <else>
+                            <assign variable="i" expression="i+1"/>
+                        </else>
+                    </if>
+                </while>
+            </for>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <if expression="Nama[i]=&quot;---&quot;">
+                    <then>
+                        <assign variable="i" expression="i+1"/>
+                    </then>
+                    <else>
+                        <output expression="Nama[i]" newline="True"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

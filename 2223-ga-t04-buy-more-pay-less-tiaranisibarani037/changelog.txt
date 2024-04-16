@@ -1,0 +1,11 @@
+Kami berusaha mengerjakan untuk menyelesaikan permasalahan dari Pak Mario
+Kesalahan dalam size array yang dimasukkan
+Kesalahan dalam pemasukan input tanda dari tanda kurang menjadi tanda sama dengan
+kesalahan dalam tanda lagi
+mencoba perubahan pada output
+perubahan spasi dan huruf besar pada output
+jumlah index yang di input kurang
+input kurang dalam example 2
+kurang nilai karena perubahan assign
+merubah semua varibel dan semua penamaannya dan menambah beberapa fungsi baru dan variabel pembantu
+merubah susunan variabel tiap perintah

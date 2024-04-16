@@ -1,0 +1,5 @@
+Menyelesaikan persoalan modular solution and function
+mengubah beberapa variabel dan penyesuaian terhadap fungsi main
+Sudah mengganti JavaApplication menjadi T05
+menghilangkan fungsi diskon yang tidak perlu
+ekspor java code menggunakan java template

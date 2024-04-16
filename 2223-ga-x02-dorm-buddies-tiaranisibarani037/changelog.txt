@@ -1,0 +1,9 @@
+Percobaan pair 08 menyelesaikan X02
+Merubah beberapa variabel dan beberapa loopingan
+Menambahkan function guna mempersingkat main function
+Mengubah jumlah output yang dikeluarkan
+Mengembalikan ke awal alur
+Menambahkan function
+Mengurangi beberapa variabel
+Mengganti loopingan dari for menjadi while
+Mengganti beberapa varibel dikarenakan untuk penyesuaian yang lebih sedikit

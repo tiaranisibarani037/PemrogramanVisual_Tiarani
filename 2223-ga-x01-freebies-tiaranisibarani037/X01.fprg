@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-10 10:18:48 AM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEwLTI3OzEwOjM3OjI1IEFNOzI4MzU="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTExLTEwOzEwOjE4OjAzIEFNOzE7TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTExLTEwOzA4OjQ3OjMxIEFNOzU4MjM="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTExLTEwOzEwOjE4OjQ4IEFNOzEwOzI5ODg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, x, y" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="1"/>
+            <assign variable="x" expression="0"/>
+            <declare name="hargaterkecil" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <declare name="totalprice" type="Real" array="False" size=""/>
+            <declare name="price" type="Real" array="True" size="100"/>
+            <while expression="a!=0">
+                <input variable="price[x]"/>
+                <assign variable="total" expression="total+price[x]"/>
+                <if expression="price[x]==0">
+                    <then>
+                        <assign variable="a" expression="0"/>
+                    </then>
+                    <else>
+                        <assign variable="x" expression="x+1"/>
+                    </else>
+                </if>
+            </while>
+            <assign variable="hargaterkecil" expression="price[0]"/>
+            <for variable="y" start="0" end="x-1" direction="inc" step="1">
+                <if expression="hargaterkecil&gt;price[y]">
+                    <then>
+                        <assign variable="hargaterkecil" expression="price[y]"/>
+                    </then>
+                    <else>
+                        <assign variable="hargaterkecil" expression="hargaterkecil"/>
+                    </else>
+                </if>
+            </for>
+            <if expression="total&gt;100.00">
+                <then>
+                    <assign variable="totalprice" expression="total-hargaterkecil"/>
+                    <output expression="ToFixed(totalprice, 2)" newline="True"/>
+                </then>
+                <else>
+                    <output expression="ToFixed(total, 2)" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,6 @@
+Tugas Praktikum 03
+Resubmit karena masih ada yang salah dalam programnya.
+Salah dalam penentuan output
+resubmit dikarenakan ingin latihan lagi
+resubmit sebab pengubahan posisi input stok
+Resubmit akan tetapi masih tetap salah, code tidak bisa di copy saat program java template

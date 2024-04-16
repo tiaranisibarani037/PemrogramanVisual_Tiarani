@@ -1,0 +1,7 @@
+Menyelesaikan persoalan T06 dengan penggunaan beberapa fungsi dari documentation intrinsic function
+penggunaan ataupun penerapan function dari pelajaran 2 minggu yang lalu
+mengimplementasikan fungsi rekursi 
+pengubahan boolean ke string agar penyesuaian terjadi sesuai yang diinginkan
+Submit di tlx sudah 100 akan tetapi github masih 0
+perubahan pada kata "true" menjadi "benar"
+mengganti kata ya dan bukan menjadi yes dan no

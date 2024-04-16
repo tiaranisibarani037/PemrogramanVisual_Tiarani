@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-06 04:39:08 PM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEwLTA2OzA0OjM4OjQ5IFBNOzI4NTc="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEwLTA2OzA0OjM4OjUyIFBNOzE7TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTA5LTI5OzAyOjEwOjM5IFBNO1QwMy5mcHJnOzY1OTQ="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEwLTA2OzA0OjM5OjA4IFBNOzE7Mjk2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ISBN" type="String" array="False" size=""/>
+            <declare name="Judulbuku" type="String" array="False" size=""/>
+            <declare name="Penulisbuku" type="String" array="False" size=""/>
+            <declare name="Tahunterbit" type="String" array="False" size=""/>
+            <declare name="Penerbit" type="String" array="False" size=""/>
+            <declare name="Format" type="String" array="False" size=""/>
+            <declare name="Hargabeli" type="Real" array="False" size=""/>
+            <declare name="Minmargin" type="Real" array="False" size=""/>
+            <declare name="Stok" type="Integer" array="False" size=""/>
+            <declare name="Rate" type="Real" array="False" size=""/>
+            <declare name="Rating" type="String" array="False" size=""/>
+            <declare name="Diskon" type="String" array="False" size=""/>
+            <declare name="Diskonb" type="String" array="False" size=""/>
+            <do expression="isbn != &quot;---&quot;">
+                <input variable="ISBN"/>
+                <if expression="ISBN==&quot;---&quot;">
+                    <then/>
+                    <else>
+                        <input variable="Judulbuku"/>
+                        <input variable="Penulisbuku"/>
+                        <input variable="Tahunterbit"/>
+                        <input variable="Penerbit"/>
+                        <input variable="Format"/>
+                        <input variable="Hargabeli"/>
+                        <input variable="Minmargin"/>
+                        <if expression="Minmargin&gt;0">
+                            <then>
+                                <assign variable="Diskon" expression="&quot;---&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="Minmargin&lt;-(hargabeli*40/100)">
+                                    <then>
+                                        <assign variable="Diskon" expression="&quot;Once in a life time&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="Minmargin&lt;-(hargabeli*20/100)">
+                                            <then>
+                                                <assign variable="Diskon" expression="&quot;Never come twice&quot;"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="Diskon" expression="&quot;No Regret&quot;"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                        <input variable="Stok"/>
+                        <input variable="Rate"/>
+                        <if expression="Rate&gt;=4.7">
+                            <then>
+                                <assign variable="Rating" expression="&quot;Best Pick&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="Rate&gt;=4.5">
+                                    <then>
+                                        <assign variable="Rating" expression="&quot;Must Read&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="Rate&gt;=4.0">
+                                            <then>
+                                                <assign variable="Rating" expression="&quot;Recommended&quot;"/>
+                                            </then>
+                                            <else>
+                                                <if expression="Rate&gt;=3.0">
+                                                    <then>
+                                                        <assign variable="Rating" expression="&quot;Average&quot;"/>
+                                                    </then>
+                                                    <else>
+                                                        <assign variable="Rating" expression="&quot;Low&quot;"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                        <if expression="Diskon==&quot;Once in a life time&quot;&amp;&amp;Rating==&quot;Best Pick&quot;">
+                            <then>
+                                <assign variable="Diskonb" expression="&quot;The Ultimate Best&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="Diskonb" expression="&quot;---&quot;"/>
+                            </else>
+                        </if>
+                        <output expression="ISBN&amp;&quot;|&quot;&amp;Judulbuku&amp;&quot;|&quot;&amp;Penulisbuku&amp;&quot;|&quot;&amp;Tahunterbit&amp;&quot;|&quot;&amp;Penerbit&amp;&quot;|&quot;&amp;Format&amp;&quot;|&quot;&amp;Hargabeli&amp;&quot;|&quot;&amp;Minmargin&amp;&quot;|&quot;&amp;Stok&amp;&quot;|&quot;&amp;Rate&amp;&quot;|&quot;&amp;Rating&amp;&quot;|&quot;&amp;Diskon&amp;&quot;|&quot;&amp;Diskonb" newline="True"/>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

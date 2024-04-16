@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 11:35:37 AM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEwLTI3OzA3OjU3OjQxIFBNOzI4NTY="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1PT0kzQ1JQVTsyMDIyLTEwLTI4OzExOjM1OjM3IEFNOzI7Mjk0Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="isbn" type="String" array="True" size="100"/>
+            <declare name="i, input" type="Integer" array="False" size=""/>
+            <declare name="harga" type="Real" array="True" size="100"/>
+            <assign variable="harga[0]" expression="0"/>
+            <assign variable="harga[1]" expression="0"/>
+            <assign variable="harga[2]" expression="0"/>
+            <declare name="jumlah" type="Integer" array="True" size="100"/>
+            <assign variable="jumlah[0]" expression="0"/>
+            <assign variable="jumlah[1]" expression="0"/>
+            <assign variable="jumlah[2]" expression="0"/>
+            <declare name="hargaeksm" type="Real" array="True" size="100"/>
+            <assign variable="hargaeksm[0]" expression="0"/>
+            <assign variable="hargaeksm[1]" expression="0"/>
+            <assign variable="hargaeksm[2]" expression="0"/>
+            <declare name="sumharga" type="Real" array="False" size=""/>
+            <assign variable="sumharga" expression="0"/>
+            <declare name="jumlah0" type="Integer" array="False" size=""/>
+            <assign variable="jumlah0" expression="0"/>
+            <declare name="jumlah1" type="Integer" array="False" size=""/>
+            <assign variable="jumlah1" expression="0"/>
+            <declare name="jumlah2" type="Integer" array="False" size=""/>
+            <assign variable="jumlah2" expression="0"/>
+            <assign variable="i" expression="0"/>
+            <declare name="book0" type="String" array="False" size=""/>
+            <assign variable="book0" expression="&quot;0&quot;"/>
+            <declare name="book1" type="String" array="False" size=""/>
+            <assign variable="book1" expression="&quot;0&quot;"/>
+            <declare name="book2" type="String" array="False" size=""/>
+            <assign variable="book2" expression="&quot;0&quot;"/>
+            <while expression="i&lt;3">
+                <input variable="isbn[i]"/>
+                <if expression="isbn[i]!=&quot;---&quot;">
+                    <then>
+                        <if expression="isbn[i]=isbn[0]">
+                            <then>
+                                <assign variable="book0" expression="isbn[0]"/>
+                                <assign variable="i" expression="0"/>
+                                <input variable="harga[i]"/>
+                                <input variable="jumlah[i]"/>
+                                <assign variable="jumlah0" expression="jumlah0+jumlah[i]"/>
+                                <assign variable="i" expression="i+1"/>
+                            </then>
+                            <else>
+                                <assign variable="book1" expression="isbn[i]"/>
+                                <if expression="isbn[i]=isbn[1]">
+                                    <then>
+                                        <assign variable="i" expression="1"/>
+                                        <input variable="harga[i]"/>
+                                        <input variable="jumlah[i]"/>
+                                        <assign variable="jumlah1" expression="jumlah1+jumlah[i]"/>
+                                        <assign variable="i" expression="i+1"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="book2" expression="isbn[i]"/>
+                                        <if expression="isbn[i]=isbn[2]">
+                                            <then>
+                                                <assign variable="i" expression="2"/>
+                                                <input variable="harga[i]"/>
+                                                <input variable="jumlah[i]"/>
+                                                <assign variable="jumlah2" expression="jumlah2+jumlah[i]"/>
+                                                <assign variable="i" expression="i+1"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <assign variable="i" expression="3"/>
+                    </else>
+                </if>
+            </while>
+            <if expression="jumlah0&lt;=5">
+                <then>
+                    <assign variable="harga[0]" expression="harga[0]-harga[0]*2/100"/>
+                </then>
+                <else>
+                    <if expression="jumlah0&lt;=10">
+                        <then>
+                            <assign variable="harga[0]" expression="harga[0]=harga[0]*5/100"/>
+                        </then>
+                        <else>
+                            <if expression="jumlah0&lt;=20">
+                                <then>
+                                    <assign variable="harga[0]" expression="harga[0]-harga[0]*12/100"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="hargaeksm[0]" expression="harga[0]*jumlah0"/>
+            <if expression="jumlah1&gt;=5">
+                <then>
+                    <assign variable="harga[1]" expression="harga[1]-harga[1]*2/100"/>
+                </then>
+                <else>
+                    <if expression="jumlah1&gt;=10">
+                        <then>
+                            <assign variable="harga[1]" expression="harga[1]=harga[1]*5/100"/>
+                        </then>
+                        <else>
+                            <if expression="jumlah1&gt;=20">
+                                <then>
+                                    <assign variable="harga[1]" expression="harga[1]-harga[1]*12/100"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="hargaeksm[1]" expression="harga[1]*jumlah1"/>
+            <if expression="jumlah2&gt;=5">
+                <then>
+                    <assign variable="harga[2]" expression="harga[2]-harga[2]*2/100"/>
+                </then>
+                <else>
+                    <if expression="jumlah2&gt;=10">
+                        <then>
+                            <assign variable="harga[2]" expression="harga[2]=harga[2]*5/100"/>
+                        </then>
+                        <else>
+                            <if expression="jumlah2&gt;=20">
+                                <then>
+                                    <assign variable="harga[2]" expression="harga[2]-harga[2]*12/100"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="hargaeksm[2]" expression="harga[2]*jumlah2"/>
+            <assign variable="sumharga" expression="hargaeksm[0]+hargaeksm[1]+hargaeksm[2]"/>
+            <output expression="ToFixed(sumharga,2)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
